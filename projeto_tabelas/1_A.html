@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha Online</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section class="logo_caixa"> <!--Deixando um section aqui pq talvez adicione mais coisas depois-->
+            <a href="index.html"><img class="logo" src="./assets/logo.png" alt="logo generica"></a>
+        </section>
+    </header>
+    <main>
+        <section class="tabela"> <!--Utilização de planilha feita no html-->
+            <table> <!--escrevendo colspan="NumDeCelulas" na tag <td> ou <th> vai agrupar elas-->
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Domingo</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                        <th>Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="horario">07:00 - 07:59</td>
+                        <td>--</td>
+                        <td>Aula 1</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 2</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr> <!--7:00-->
+                    <tr>
+                        <td class="horario">08:00 - 08:59</td>
+                        <td>--</td>
+                        <td>Aula 1</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 2</td>
+                        <td>--</td>
+                        <td>Aula 3</td>
+                    </tr> <!--8:00-->
+                    <tr>
+                        <td class="horario">09:00 - 09:59</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 2</td>
+                        <td>--</td>
+                        <td>Aula 3</td>
+                    </tr> <!--9:00-->
+                    <tr>
+                        <td class="horario">10:00 - 10:59</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 4</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 3</td>
+                    </tr> <!--10:00-->
+                    <tr>
+                        <td class="horario">11:00 - 11:59</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 4</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 5</td>
+                        <td>--</td>
+                    </tr> <!--11:00-->
+                    <tr>
+                        <td class="horario">12:00 - 12:59</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 4</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Aula 5</td>
+                        <td>--</td>
+                    </tr> <!--12:00-->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <section class="caixa_rodapes">
+            <div class="caixa_rodape">
+                <h2>Sobre</h2>
+                <p>O neofus tem como objetivo a modernização da forma com que as instituições de ensino apresentam seus horários de aula.</p>
+            </div>
+            <div class="caixa_rodape">
+                <h2>Contato</h2>
+                <p>neofussite@gmail.com</p> <!--Colocar os simbolos de email e twitter pode ser interessante-->
+                <p>@NeofusOficial</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

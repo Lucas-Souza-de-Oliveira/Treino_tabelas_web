@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor_primaria: #11caca;
+    --cor_secundaria: #e6eff7;
+    --cor_texto_padrao: #6e7079;
+    --cor_texto_secundario: aliceblue;
+    --cor_texto_rodape: #3a3b41;
+    --cor_borda_tabela: #129e9e;
+    --Familia_fonte: 'Montserrat', sans-serif;
+}
+
+/*Estilos gerais e para a tela inicial*/
+
+html{
+    background-color: var(--cor_primaria); /*Coloca a cor do site pra cor_principal, ou seja, quando força o site pra além do seu conteudo, aparece essa cor*/
+}
+
+body{
+    background-color: var(--cor_secundaria); /*Coloca a cor do body pra cor_secundaria, fazendo com que toda a parte com conteudo do site tenha fundo dessa cor (a não ser que o contrario sejá dito*/
+    margin: 0; /*Isso aqui é pra a borda azul aparecer (5px é o que eu tava usando)*/
+}
+
+header{
+    padding: 1% 0;
+    background-color: var(--cor_primaria);
+    border-radius: 0 0 16px 16px; /*Borda na parte inferior. Não colocando em rem pra não haver alterações no tamanho*/
+}
+
+.logo_caixa a{ 
+    margin: 1% 5%;
+}
+
+.logo{
+    width: 20%;
+}
+
+main{
+    background-color: var(--cor_secundaria);
+    padding: 2% 0 2% 0;
+}
+
+.caixa_turmas{ /*Definindo o espaço que será ocupado pela estrutura de listagem de turmas*/
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.caixa_turmas h1{ /*Estilização do titulo de cada lista*/
+    color: var(--cor_texto_padrao);
+    font-family: var(--Familia_fonte);
+    font-weight: 600;
+    text-shadow: 1px 1px var(--cor_texto_secundario);
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem 0 1rem 0;
+}
+
+.caixa_turmas ul{ /*Estilização do espaço onde a listagem das turmas são exibidas*/
+    background-color: var(--cor_primaria);
+    /*border-radius: 20px;*/ /*Pra caso queira fazer a borda arredondada*/
+    margin: 1rem 0; 
+    padding: 0.25rem 0; 
+}
+
+.caixa_turmas_solo{
+    padding: 0 10%;
+}
+
+.caixa_turmas_solo li{ /*Estilização dos nomes das turmas*/
+    font-family: var(--Familia_fonte);
+    font-weight: 400;
+    display:inline-block;
+    padding: 1% 0 1% 0;
+    font-size: 1.5rem;
+    color: var(--cor_texto_secundario);
+}
+
+.caixa_turmas_solo span{ /*Criação de barras separando os nomes das turmas*/
+    padding: 0px 1rem;
+    border-left: 1px solid var(--cor_texto_secundario);
+    display: inline-block;
+}
+
+.caixa_turmas_solo li:first-child span{
+    border-left:none;  
+}
+
+.caixa_turmas_solo a{
+    text-decoration: none;
+    color: var(--cor_texto_secundario);
+}
+
+footer{
+    background-color: var(--cor_primaria);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.caixa_rodapes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.caixa_rodape{
+    display: inline-block;
+    width: 39.5%;
+    text-align: center;
+    padding: 2% 5%;
+}
+
+.caixa_rodape h2{
+    color: var(--cor_texto_rodape);
+    font-family: var(--Familia_fonte);
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.caixa_rodape p{
+    color: var(--cor_texto_rodape);
+    font-family: var(--Familia_fonte);
+    font-weight: 400;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/*Estilos para tabelas*/
+
+.tabela{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 2%;
+}
+
+.tabela table, th, td{
+    border: 5px inset var(--cor_borda_tabela);
+    text-align: center;
+    font-family: var(--Familia_fonte);
+    color: var(--cor_texto_rodape);
+    font-size: 1rem;
+}
+
+.tabela table{
+    width: 80%;
+    border-style: solid;
+}
+
+.tabela th, td{
+    padding: 0.5rem 0;
+}
+
+.tabela th{
+    font-weight: bold;
+}
+
+.horario{
+    font-weight: bold;
+}
+
+/*Estilos para planilha excel*/
+.caixa_excel{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#excel{
+    border: none;
+    height: 16rem;
+    width: 70%;
+    margin: 0 14%;
+}
+
+/*Estilos para o site criado a partir do excel*/
+.caixa_tabela_excel {
+    border: 5px solid #129E9E;
+    background-color: #E6EFF7;
+    width: 100%;
+    border-collapse: collapse;
+}
+.caixa_tabela_excel td, th {
+    border: 5px solid var(--cor_borda_tabela);
+    text-align: center;
+    font-family: var(--Familia_fonte);
+    color: var(--cor_texto_rodape);
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+.caixa_tabela_excel tbody td {
+    font-size: 1rem;
+}
+.caixa_tabela_excel thead {
+    background: #E6EFF7;
+    border-bottom: 5px solid #129E9E;
+}
+.caixa_tabela_excel thead th {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3A3B41;
+    text-align: center;
+    border-left: 5px solid #129E9E;
+}
+
+#inspirado_excel{
+    border: none;
+    height: 272px; /*Ou 17rem*/
+    width: 70%;
+    margin: 0 14%;
+    padding: 1% 0 0 0;
+}
+
+.caixa_tabela{
+    display: flex;
+    justify-content: center;
+}
+
+.equalizar{
+    margin: 0 2%;
+    background-color: var(--cor_secundaria);
+}
+
+.equalizar main{
+    padding: 0 0;
+}
+
+/*Estilos para a tabela feita usando flex ao inves da tag table*/
+.centralizar{
+    display: flex;
+    justify-content: center;
+}
+
+.caixa_tabela_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    padding: 1rem 0;
+}
+
+.coluna{
+    border: 5px solid var(--cor_borda_tabela);
+    border-right: none;
+    text-align: center;
+    font-family: var(--Familia_fonte);
+    color: var(--cor_texto_rodape);
+    font-size: 1rem;
+}
+
+.nao_table_titulo{
+    font-weight: bold;
+}
+
+#ultima_coluna{
+    border-right: 5px solid var(--cor_borda_tabela);
+}
+
+.coluna h1, .coluna p{
+    border-bottom: 5px solid var(--cor_borda_tabela);
+    padding: 0.5rem 1rem;
+}
+
+.coluna :last-child{
+    border-bottom: none;
+}
